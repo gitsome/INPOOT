@@ -1,0 +1,19 @@
+body {padding:0px; margin:0px;}
+.example-buttons {
+    padding:10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+    color:#444;
+    text-align:right;
+}
+#activate-inpoot {float:left;}
+.game-area {
+    width:600px;
+    margin:25px auto;
+}
+.game-area canvas {
+    width:600px;
+    height:400px;
+    -moz-box-shadow: 0px 0px 8px #444;
+    -webkit-box-shadow: 0px 0px 8px #444;
+}

@@ -1,0 +1,1471 @@
+body {margin:0; padding:0;}
+.inpoot-no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.inpoot-top {
+    margin-left:10px; margin-bottom:20px; overflow:hidden; margin-right:10px;
+    padding:10px 20px; 
+    background:#eee;
+    border-radius:5px;
+    -moz-border-radius:5px;
+}
+.inpoot-top-highlight {
+    padding-left:2px;
+    padding-right:2px;
+    color:#000;
+    font-weight:bold;
+    text-shadow:0px 0px 1px #FFFFFF;
+}
+.inpoot-top.with-icon {
+    position:relative;
+    padding-right:45px;
+}
+.inpoot-top-title {float:right; color:#999;}
+.inpoot-top-options {float:left;}
+.inpoot-top-option {cursor:pointer; margin-right:10px; border-radius:5px; -moz-border-radius:5px; color:#444; text-transform: uppercase;}
+.inpoot-top-option:hover {color:#000;}
+.inpoot-help {position:absolute; opacity:0.4; right:10px; top:6px; height:25px; cursor:pointer; margin-left:10px; width:25px; background: url(images/utility-icons.png) 0 0 no-repeat; display:inline-block;}
+.inpoot-help:hover {background: url(images/utility-icons.png) 0 -25px no-repeat; opacity:1;}
+.inpoot-players-list {margin-left:10px; margin-right:10px; padding-bottom:20px;}
+.inpoot-player-info {
+    overflow:hidden;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+.inpoot-player-options {
+    display:none;
+    margin-top:7px; margin-bottom:3px;
+    padding:10px 0px 10px 15px; padding-right:0px;
+    border-radius:5px; -moz-border-radius:5px; background:#eee;
+    clear:both;
+    margin-right:5px;
+    margin-left:5px;
+    -moz-box-shadow: inset 0px 0px 4px #888;
+    -webkit-box-shadow: inset 0px 0px 4px #888;
+}
+.inpoot-player  {
+    margin-top:10px;
+    padding:7px 10px;
+    text-align:left;
+    font-size:18px;
+    color:#444;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    text-shadow:0px 1px 0px #fff;
+    border:1px solid #bbb;
+    border-bottom: 1px solid #888;
+    border-top:1px solid #ddd;
+    
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-player:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-player-options-button.inpoot-gather-add-button.active {
+    width: 60px;
+    text-align:center; color:#666; font-size:14px; 
+    padding-top:9px; padding-bottom:9px;
+}
+.inpoot-player-actionmap:hover, .inpoot-player-options-button:hover {
+    -moz-box-shadow: 0 0 3px #00FF00;
+    -webkit-box-shadow: 0 0 3px #00FF00;
+}
+.inpoot-player-icon.inpoot-mapping-item-inputs-input {float:none; display:inline-block;}
+.inpoot-player:hover .inpoot-player-icon.inpoot-mapping-item-inputs-input.players{
+    background-position-y : -50px;
+}
+.inpoot-player-icon.inpoot-mapping-item-inputs-input.players {margin-top:2px;}
+.inpoot-player-left {float:left;}
+.inpoot-player-right {float:right;}
+.inpoot-player-title {text-shadow:0px 0px 2px #00ff00;}
+.player-error .inpoot-player-title {text-shadow:0px 0px 2px #ff0000;}
+.inpoot-player-number {vertical-align: top; padding-right:5px; font-size:20px; padding-left:0px; padding-top:6px; display:inline-block;}
+.inpoot-player-actionmap.inpoot-gather-add-button.active {width:220px; height:18px; text-align:center; color:#666; font-size:14px;}
+.inpoot-player-actionmap-title {float:left; display:inline-block; width: 130px; overflow:hidden; text-align:left;}
+.inpoot-player-input-types {float:right;}
+.inpoot-player-actionmap {overflow:hidden;}
+.inpoot-player-actionmap.inpoot-gather-add-button {padding:8px 10px;}
+.inpoot-player-actionmap:hover .inpoot-input-icon-xsmall {background-position-y: -25px;}
+.inpoot-input-icon {vertical-align:middle; display:inline-block; width:100px; height:60px; margin-right:5px; margin-left:5px;}
+.inpoot-main-option:hover .inpoot-input-icon, .inpoot-main-gamepad-option.active .inpoot-input-icon {cursor:pointer; background-position-y:-100px !important;}
+.inpoot-input-icon.gamepad {width: 80px; background: url(images/inpoot_icons.png) -10px 0 no-repeat;}
+.inpoot-input-icon.mouse {width:60px; background: url(images/inpoot_icons.png) -120px 0 no-repeat;}
+.inpoot-input-icon.keyboard {background: url(images/inpoot_icons.png) -200px 0 no-repeat;}
+.inpoot-input-icon.players {background: url(images/inpoot_icons.png) -300px 0 no-repeat;}
+.inpoot-input-icon.settings {background: url(images/inpoot_icons.png) -400px 0 no-repeat;}
+.inpoot-player-wrapper {
+    overflow:hidden;
+    width:670px;
+    text-align: left;
+}
+.inpoot-player-input-combo {position:relative;}
+.inpoot-player-input-combo .arrow-left {position:absolute; left:0; top:25px;}
+.inpoot-player-input-combo .arrow-right {position:absolute; right:0; top:25px;}
+
+.inpoot-player-invert-axis {
+    padding:8px;
+    display:inline-block; position:relative; padding:5px 8px; overflow:visible; text-align:center;
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-bottom:1px solid #999;
+    border-radius: 5px; -moz-border-radius:5px;
+    margin-right:5px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: -moz-linear-gradient(top,  #fff,  #eee);
+    cursor:pointer;
+    font-size:14px;
+    width:274px;
+    overflow:hidden;
+    color:#888;
+}
+.inpoot-player-invert-axis:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fff,  #fafafa);
+    -moz-box-shadow: 0 0 3px #00FF00;
+    -webkit-box-shadow: 0 0 3px #00FF00;
+    color:#444;
+}
+.inpoot-player-options-title {color:#444; font-size:16px; font-weight:bold; margin-top:5px; margin-bottom:5px;}
+.inpoot-player-invert-axis-name {float:left; font-weight:bold;}
+.inpoot-player-invert-axis-value {float:right;}
+.inverted-true .inpoot-player-invert-axis-value{color:#222; text-shadow:0px 0px 3px #00FF00;}
+.inpoot-player-options-button.inpoot-gather-add-button.active.inpoot-player-gamepad-index {
+    width: 120px; 
+}
+
+/*======= EDIT ACTION MAP =======*/
+.inpoot-main-gamepad-options-message input {
+    text-align: left;
+    padding:0px 0px;
+    cursor:pointer;
+    margin-top:7px;
+    font-size:20px;
+    color:#666;
+    border:0px;
+    outline:0px;
+}
+.inpoot-main-gamepad-options-message .inpoot-options-left {
+    float:left;
+}
+.inpoot-main-gamepad-options-message .inpoot-options-right {
+    float:right;
+}
+.inpoot-main-gamepad-options-message .inpoot-options-right .inpoot-input-selector{
+    float:left;
+}
+.inpoot-main-gamepad-options-message .inpoot-options-left input {margin-top:7px; margin-left:8px;}
+.inpoot-main-gamepad-options-message input:hover {
+    color:#444;
+    text-shadow:0px 0px 3px #00FF00;
+}
+.inpoot-main-gamepad-options-message input:focus {
+    color:#000;
+    text-shadow:0px 0px 3px #FF0000;
+}
+
+/*===== ICONS =====*/
+
+.inpoot-input-icon-small-container {position:relative;}
+.inpoot-input-icon-small {
+    width:40px; height:30px;
+    margin-left:5px;
+    position:absolute;
+    left:0px;
+    top:1px;
+}
+.keyboard .inpoot-input-icon-small-container {padding-left: 80px; position:relative;}
+.keyboard .inpoot-input-icon-small {
+    width:50px; background: url(images/inpoot_icons.png) -100px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.mouse .inpoot-input-icon-small-container {padding-left: 52px;}
+.mouse .inpoot-input-icon-small {
+    width:25px; background: url(images/inpoot_icons.png) -63px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.gamepad .inpoot-input-icon-small-container {padding-left: 65px;}
+.gamepad .inpoot-input-icon-small {
+    background: url(images/inpoot_icons.png) -5px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.inpoot-input-icon-small-container:hover .inpoot-input-icon-small {background-position-y: -50px;}
+
+/*===== ICONS XTRA SMALL =====*/
+
+.inpoot-input-icon-xsmall-container {position:relative;}
+.inpoot-input-icon-xsmall {
+    display:inline-block;
+    width:25px; height:15px;
+}
+.inpoot-input-icon-xsmall-container .inpoot-input-icon-xsmall {
+    position:absolute;
+    left:5px;
+    top:3px;
+}
+.keyboard .inpoot-input-icon-xsmall-container {padding-left: 34px; position:relative;}
+.keyboard .inpoot-input-icon-xsmall {
+    width:25px; background: url(images/inpoot_icons.png) -50px 0 no-repeat;
+    -moz-background-size: 125px auto !important;
+    background-size:125px auto;
+}
+.mouse .inpoot-input-icon-xsmall-container {padding-left: 34px;}
+.mouse .inpoot-input-icon-xsmall {
+    width:25px; background: url(images/inpoot_icons.png) -25px 0 no-repeat;
+    -moz-background-size: 125px auto !important;
+    background-size:125px auto;
+}
+.gamepad .inpoot-input-icon-xsmall-container {padding-left: 34px;}
+.gamepad .inpoot-input-icon-xsmall {
+    background: url(images/inpoot_icons.png) -1px 0 no-repeat;
+    -moz-background-size: 125px auto !important;
+    background-size:125px auto;
+}
+.inpoot-input-icon-xsmall-container:hover .inpoot-input-icon-xsmall {background-position-y: -25px;}
+
+.inpoot-main-gamepad-options-message .style-select-left-image {
+    width:40px; height:30px; 
+    margin-left:5px;
+    position:absolute;
+    left:0px;
+    top:1px;
+}
+
+.inpoot-main-gamepad-options-message .styled-select-container{
+    padding:8px;
+}
+
+.inpoot-input-selector.keyboard .styled-select-container {padding-left: 80px;}
+.inpoot-input-selector.keyboard .style-select-left-image {
+    width:50px; background: url(images/inpoot_icons.png) -100px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+
+.inpoot-input-selector.mouse .styled-select-container {padding-left: 52px;}
+.inpoot-input-selector.mouse .style-select-left-image {
+    width:25px; background: url(images/inpoot_icons.png) -63px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.inpoot-input-selector.gamepad .styled-select-container {padding-left: 65px;}
+.inpoot-input-selector.gamepad .style-select-left-image {
+    background: url(images/inpoot_icons.png) -5px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+
+.inpoot-input-selector:hover .style-select-left-image {background-position-y: -50px;}
+
+/*======= STYLED SELECT PLUGIN =======*/
+.styled-select-container {
+    display:inline-block; position:relative; padding:5px 8px; overflow:visible; text-align:center;
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-bottom:1px solid #999;
+    border-radius: 5px; -moz-border-radius:5px;
+    margin-left:10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: -moz-linear-gradient(top,  #fff,  #eee);
+    cursor:pointer;
+}
+.styled-select-container:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fff,  #fafafa);
+    color:#444;
+}
+.styled-select-container.open .styled-select-options {display:inline-block;}
+.styled-select-value {color:#66AA66;}
+.styled-select-container:hover .styled-select-value {color:#008800;}
+.styled-select-value.off {color: #AA6666;}
+.styled-select-container:hover .styled-select-value.off {color: #880000;}
+.style-select-option {display:block;}
+.style-select-option-text {}
+.styled-select-options {
+    display:none; width:170%; position:absolute; 
+    top:100%; right:0;
+    margin-top:-3px;
+    background:#fff;
+    border-radius:5px; -moz-border-radius:5px;
+    text-align:right;
+}
+
+/*======= OPTION BOX =======*/
+
+.inpoot-option-box-screen {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:black;  
+    opacity:0.25; /* Sets opacity so it's partly transparent */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)"; /* IE transparency */
+    filter:alpha(opacity=25); /* More IE transparency */
+    z-index:50000;
+}
+.inpoot-option-box-wrapper {
+    font-family:Arial, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    position:absolute;
+    top:20px;
+    left:50%;
+    overflow:visible;
+    z-index:50001;
+}
+.inpoot-option-box-close {
+    text-align:right;
+    color:#888;
+    cursor:pointer;
+}
+.inpoot-option-box-title {
+    margin:10px 0px 15px 0px;
+    padding:10px;
+    color:#ddd;
+    background:#444;
+    text-align:left;
+    border-radius:5px; -moz-border-radius:5px;
+}
+.inpoot-option-box {
+    position:relative;
+    left:-200px;
+    background:#fff;
+    padding:10px;
+    display:none;
+    width: 400px;
+    border-radius:5px; -moz-border-radius:5px;
+    -moz-box-shadow: 0 0 5px #444444;
+    -webkit-box-shadow: 0 0 5px #444444;
+}
+.inpoot-option-box-inner {
+    position:relative;
+}
+
+.inpoot-option-box-option {
+    text-align:center;
+    margin-top:5px;
+    padding:5px;
+    font-size:18px;
+    color:#444;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    text-shadow:0px 1px 0px #fff;
+    border:1px solid #aaa;
+    border-bottom: 1px solid #666;
+    border-top:1px solid #ccc;
+    
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-option-box-option:hover {
+    color:#000;
+    -moz-box-shadow: 0 0 3px #00FF00;
+    -webkit-box-shadow: 0 0 3px #00FF00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-option-box-option.disabled {
+    color:#999;
+    opacity:0.5;
+}
+.inpoot-option-box-option.disabled:hover {
+    color:#999;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-option-box-option a {
+    color:#444;
+    text-decoration:none;
+}
+.inpoot-map-form {
+    overflow:hidden;
+    position:relative;
+    padding-top:15px;
+    margin-left:10px;
+    margin-right:10px;
+}
+.inpoot-map-form.editing .inpoot-map-form-left {
+    overflow:hidden;
+    width:0%;
+}
+.inpoot-map-form.editing .inpoot-map-form-middle {
+    overflow:hidden;
+    width:0%;
+}
+.inpoot-map-form.editing .inpoot-map-form-right {
+    overflow:hidden;
+    width:65%;
+}
+.inpoot-map-form.editing .inpoot-map-form-right-inner {
+    margin-left:0px;
+}
+.inpoot-map-form.editing .inpoot-map-form-left-hidden {
+    width:35%;
+}
+
+.inpoot-map-form-left {
+    transition:all 500ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 500ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 500ms cubic-bezier(0.42,0,0.58,1);
+    float:left;
+    text-align:left;
+    width:20%;
+}
+.inpoot-map-form-left-inner {
+    background:#eee;
+    height:350px;
+    border:3px solid #ddd;
+}
+.inpoot-map-form-middle {
+    transition:all 500ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 500ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 500ms cubic-bezier(0.42,0,0.58,1);
+    float:left;
+    text-align:left;
+    width:25%;
+}
+.inpoot-map-form-middle-inner {
+    background:#eee;
+    height:350px;
+    border:3px solid #ddd;
+    border-right: 4px solid #ddd;
+    border-left:0px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.inpoot-edit-action-map-list-group-action {
+    white-space:nowrap;
+    text-align:left;
+    padding:4px 15px 4px 5px;
+    font-size:14px;
+    color:#444;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    text-shadow:0px 1px 0px #fff;
+    border:1px solid #aaa;
+    border-bottom: 1px solid #999;
+    border-top:1px solid #ccc;
+    
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-edit-action-map-list-group-action:hover {
+    color:#222;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-edit-action-map-list-group-action.selected:hover,
+.inpoot-edit-action-map-list-group-action.selected {background:#fff;}
+.inpoot-edit-action-map-list-group-action .giput-selected-arrow {display:none;}
+.inpoot-edit-action-map-list-group-action.selected .inpoot-selected-arrow,
+.inpoot-edit-action-map-list-group-action.selected:hover .inpoot-selected-arrow {
+    position:absolute;
+    width: 0;
+    height: 0;
+    right:5px;
+    top:7px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    display:inline-block;
+    border-left: 5px solid #444;
+}
+.inpoot-edit-action-map-list-group-action:hover .inpoot-selected-arrow {
+    position:absolute;
+    width: 0;
+    height: 0;
+    right:5px;
+    top:7px;
+    display:inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #ccc;
+}
+.inpoot-map-form-right {
+    transition:all 500ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 500ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 500ms cubic-bezier(0.42,0,0.58,1);
+    float:right;
+    text-align:center;
+    width:55%;
+}
+.inpoot-map-form-right-inner {
+    padding:10px;
+    background:#fff;
+    border:3px solid #ddd;
+    border-radius:5px; -moz-border-radius:5px;
+    margin-left:5px;
+    height:330px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.editing .inpoot-map-form-right-inner {
+    overflow:hidden;
+}
+.inpoot-map-form-left-hidden {
+    transition:all 500ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 500ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 500ms cubic-bezier(0.42,0,0.58,1);
+    overflow:hidden;
+    width:0%;
+    float:left;
+}
+.inpoot-close-edit-mapping {
+    text-align:center;
+    padding-top:100px;
+    font-weight:bold;
+    color:#000;
+    font-size:30px;
+    overflow:hidden;
+    white-space:no-wrap;
+    opacity:0.45;
+    text-shadow: 0px 2px 0px white;
+}
+.inpoot-close-edit-mapping div {
+    margin-top:15px;
+}
+.inpoot-map-form-left-hidden-inner {
+    margin-right:10px;
+    height:356px;
+}
+.inpoot-editing-inputs-title {
+    padding-top:25px; 
+    text-align:center;
+    border:3px solid #eee;
+    margin-bottom:10px;
+    color:#6A6;
+    font-weight:bold;
+    text-shadow:0px 1px 0px #fff;
+    font-size: 20px;
+    border-radius:5px; -moz-border-radius:5px;
+    height:45px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.inpoot-editing-inputs-close {
+    padding:10px;
+    border:1px solid #aaa;
+    border-bottom: 1px solid #999;
+    border-top:1px solid #ccc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+    border-radius:5px; -moz-border-radius:5px;
+    cursor:pointer;
+    height:248px;
+}
+.inpoot-editing-inputs-close:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-editing-inputs-close:hover .inpoot-close-edit-mapping {
+    opacity:0.65;
+}
+.inpoot-edit-action-map-list-group-name {
+    text-align:left;
+    padding:5px 25px 5px 5px;
+    font-size:18px;
+    color:#444;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    text-shadow:0px 1px 0px #fff;
+    border:1px solid #aaa;
+    border-bottom: 1px solid #999;
+    border-top:1px solid #ccc;
+    
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-edit-action-map-list-group-name:hover {
+    color:#222;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-edit-action-map-list-group-name .giput-selected-arrow {display:none;}
+.inpoot-edit-action-map-list-group.selected .inpoot-edit-action-map-list-group-name .inpoot-selected-arrow,
+.inpoot-edit-action-map-list-group.selected .inpoot-edit-action-map-list-group-name.selected:hover .inpoot-selected-arrow {
+    position:absolute;
+    width: 0;
+    height: 0;
+    right:5px;
+    top:7px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    display:inline-block;
+    border-left: 8px solid #444;
+}
+.inpoot-edit-action-map-list-group-name:hover .inpoot-selected-arrow {
+    position:absolute;
+    width: 0;
+    height: 0;
+    right:5px;
+    top:7px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    display:inline-block;
+    border-left: 8px solid #ccc;
+}
+.inpoot-edit-action-map-list-group.selected .inpoot-edit-action-map-list-group-name:hover, 
+.inpoot-edit-action-map-list-group.selected .inpoot-edit-action-map-list-group-name {
+    color:#222;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8));
+    background: -moz-linear-gradient(top,  #fff,  #f8f8f8);
+}
+.inpoot-edit-action-map-list-group-actions {
+    display:none;
+}
+.inpoot-edit-action-title {
+    vertical-align: middle;
+    color:#444;
+}
+.inpoot-edit-action-title-actionid {
+    color:#AAA;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.inpoot-edit-action-top {
+    padding:5px;
+    border:2px solid #ccc;
+    border-radius:5px; -moz-border-radius:5px;
+}
+.inpoot-main-gamepad-edit-action-options {
+    text-align:center;
+    margin-top:5px;
+    border-radius:5px; -moz-border-radius:5px;
+    border:2px dashed #DDD;
+    padding:4px;
+    color:#AAA;
+    font-size: 14px;
+    font-weight:normal;
+    overflow:hidden;
+    cursor: pointer; 
+}
+.inpoot-main-gamepad-edit-action-options:hover {
+    color:#444;
+}
+.inpoot-edit-action-keys {
+    position:relative;
+    margin-top:5px;
+    color: #888;
+    font-size:14px;
+    border-radius:5px; -moz-border-radius:5px;
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-bottom:1px solid #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: -moz-linear-gradient(top,  #fff,  #eee);
+    cursor:pointer;
+}
+.inpoot-edit-action-keys:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fff,  #fafafa);
+    color:#444;
+}
+.inpoot-edit-action-keys.hide-action-inputs {
+    display:none;
+}
+.inpoot-edit-action-keys-list {padding:8px 5px 8px 35px; text-align:left; min-height:35px;}
+.inpoot-edit-action-keys-list-and {vertical-align:middle; display:inline-block; color:#666; padding-top:3px; cursor:pointer;}
+.inpoot-edit-action-keys-list-and.edit {padding-top:8px;}
+.inpoot-edit-action-keys-list-input {viertical-align:middle; display:inline-block;}
+.inpoot-edit-action-keys .inpoot-x-out {
+    position:absolute; left:6px; top:13px;
+    width:25px;
+    height:25px;
+    background: url(images/utility-icons.png) 0 -50px no-repeat;
+    cursor:pointer;
+    opacity:0.4;
+}
+.inpoot-edit-action-keys .inpoot-x-out:hover {background: url(images/utility-icons.png) 0 -75px no-repeat; opacity:0.8;}
+
+.inpoot-edit-mapping-gather-inputs {
+    margin-bottom:6px;
+    padding:0px;
+    border-radius:5px; -moz-border-radius:5px;
+    border: 2px solid #ccc;
+    color:#444;
+}
+.inpoot-edit-mapping-gather-inputs-content {
+    padding:5px;
+}
+.inpoot-edit-mapping-gather-title {
+    text-align:left;
+    color:#444;
+    font-size:14px;
+    padding-top:4px;
+    padding-bottom:5px;
+    background: #eee;
+    overflow:hidden;
+}
+.inpoot-edit-mapping-gather-title.inpoot-input-icon-xsmall-container:hover .inpoot-input-icon-xsmall {background-position-y: 0px;}
+.inpoot-gather-add-button {
+    color:#999;
+    float:right;
+    margin-right:5px;
+    border-radius:5px; -moz-border-radius:5px;
+    border: 1px solid #aaa;
+    padding:2px 10px;
+    border-top: 1px solid #ccc;
+    border-bottom:1px solid #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: -moz-linear-gradient(top,  #fff,  #eee);
+    cursor:pointer;
+}
+.inpoot-gather-add-button.active {
+    color:#444;
+}
+.inpoot-gather-add-button.active:hover {
+    color:#222;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fff,  #fafafa);
+}
+.input-count-2 .inpoot-edit-mapping-gather-input-list {height:122px;}
+.input-count-1 .inpoot-edit-mapping-gather-input-list {height:290px;}
+.inpoot-edit-mapping-gather-input-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:5px;
+    padding-top: 0px;
+    text-align:left;
+    height:66px;
+}
+.inpoot-edit-mapping-gather-input-list-item {
+    padding:4px 5px; margin-top:5px;
+    padding-left:35px;
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-bottom:1px solid #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: -moz-linear-gradient(top,  #fff,  #eee);
+    color:#6A6;
+    border-radius:5px; -moz-border-radius:5px;
+    text-align:left;
+    position:relative;
+}
+.inpoot-edit-mapping-gather-input-list-item .inpoot-x-out {
+    position:absolute; left:2px; top:1px;
+    width:25px;
+    height:25px;
+    background: url(images/utility-icons.png) 0 -50px no-repeat;
+    cursor:pointer;
+    opacity:0.4;
+}
+.inpoot-edit-mapping-gather-input-list-item .inpoot-x-out:hover {
+    background: url(images/utility-icons.png) 0px -75px no-repeat;
+    opacity:0.6;
+}
+.inpoot-edit-mapping-gather-input-list-item:hover {
+    color:#339933;   
+}
+.inpoot-input-item {
+    color:#6A6;
+    padding: 7px 10px 7px 5px;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EEE));
+    background: -moz-linear-gradient(top, white, #EEE);
+
+    display: inline-block;
+    border-radius: 5px;
+    text-shadow: 0px 1px 0px white;
+    border: 1px solid #AAA;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #CCC;
+    margin-right:5px;
+    margin-bottom:2px;
+    margin-top:2px;
+    width: 145px;
+}
+.inpoot-edit-action-keys:hover .inpoot-input-item {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fff,  #fafafa);
+}
+.inpoot-input-item:hover .inpoot-input-icon-xsmall {background-position-y:0px;}
+.inpoot-input-item .inpoot-input-icon-xsmall {top: 0px;}
+/*======= EDIT AN ACTION MAP =======*/
+
+.inpoot-edit-action-map-wrapper {
+    width: 760px;
+    position:relative;
+    padding-bottom:20px;
+    display:inline-block;
+}
+.inpoot-edit-action-map-wrapper .inpoot-main-gamepad-options-message {
+    overflow:visible;
+}
+.inpoot-options-clear {
+    clear:both;
+}
+
+/*======= GAMEPAD calibrate =======*/
+
+.inpoot-gamepad-calibrate-wrapper {
+    width: 800px;
+    position:relative;
+    padding-bottom:20px;
+    display:inline-block;
+}
+.inpoot-gamepad-calibrate-panel-instructions  {
+    text-align:center;
+    border-radius:5px; -moz-border-radius:5px;
+    border:3px dashed #BBB;
+    padding:10px;
+    color:#777;
+}
+.inpoot-gamepad-calibrate-panel-button {
+    padding:10px;
+    text-align:center;
+    font-size:18px;
+    color:#444;
+    margin: 0;
+    margin-left:0;
+    margin-right:0;
+    position:relative;
+    overflow:hidden;
+    
+    cursor:pointer;
+    border:1px solid #ccc;
+    border-bottom: 1px solid #999;
+    border-top:1px solid #fff;
+    position:relative;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc); 
+    
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+}
+
+.inpoot-gamepad-calibrate-panel-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+
+/*======= GAMEPAD CONTENT ========*/
+.inpoot-gamepad-wrapper {
+    width: 650px;
+    position:relative;
+    padding-bottom:20px;
+    display:inline-block;
+}
+.inpoot-main-gamepad-options-message  {
+    margin-left:10px; margin-right:10px; text-align:center;
+    border-radius:5px; -moz-border-radius:5px;
+    border:3px dashed #DDD;
+    padding:10px;
+    color:#AAA;
+    overflow:hidden;
+}
+.inpoot-main-gamepad-options-summary {
+    margin-left:10px;
+    margin-right:10px;
+    padding:10px;
+    padding-top:0px;
+    margin-bottom:10px;
+    text-align:center;
+    color:#444;
+    font-size:14px;
+    display:none;
+}
+
+/*======= MAPPINGS MENU =======*/
+.inpoot-mappings-wrapper {
+    width: 600px;
+    position:relative;
+    padding-bottom:20px;
+}
+.inpoot-message-button {
+    color:#666;
+    font-weight:bold;
+    cursor:pointer;
+}
+.inpoot-message-button:hover {color:#444;}
+.inpoot-mappings-list {
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.inpoot-mapping-item {
+    margin-top:10px;
+    padding:10px;
+    text-align:left;
+    font-size:18px;
+    color:#444;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    text-shadow:0px 1px 0px #fff;
+    border:1px solid #bbb;
+    border-bottom: 1px solid #888;
+    border-top:1px solid #ddd;
+    
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-mapping-item:hover {
+    -moz-box-shadow: 0 0 3px #00FF00;
+    -webkit-box-shadow: 0 0 3px #00FF00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-mapping-item-left {float:left; height:25px; vertical-align:middle;}
+.inpoot-mapping-item-delete-confirm {
+    height:27px;
+    padding-top:3px;
+    display:none;
+    float:right;
+    
+}
+.inpoot-mapping-item-delete-confirm-button {
+    padding:0 5px; display:inline-block; text-align:center;
+}
+.inpoot-mapping-item-delete-confirm-cancel:hover {color:#008800;}
+.inpoot-mapping-item-delete-confirm-okay:hover {color:#880000;}
+.inpoot-mapping-item-delete {
+    display:inline-block;
+    margin-right:10px;
+    margin-top:2px;
+    width:25px;
+    height:25px;
+    background: url(images/utility-icons.png) 0 -50px no-repeat;
+    cursor:pointer;
+    opacity:0.4;
+}
+.inpoot-mapping-item-delete:hover {
+    background: url(images/utility-icons.png) 0 -75px no-repeat; opacity:0.8;
+}
+.inpoot-mapping-item-name {vertical-align:middle;}
+.inpoot-parens {font-size:14px; color:#777; vertical-align:middle;}
+.inpoot-mapping-item-inputs {float:right;}
+.inpoot-mapping-item-inputs-input {float:left; width:40px; height:30px;  
+    margin-left:5px;
+}
+.inpoot-mapping-item-inputs-input.gamepad {
+    background: url(images/inpoot_icons.png) -5px 0 no-repeat; 
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.inpoot-mapping-item-inputs-input.keyboard {
+    width:50px; background: url(images/inpoot_icons.png) -100px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.inpoot-mapping-item-inputs-input.mouse {
+    width:25px; 
+    background: url(images/inpoot_icons.png) -63px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+.inpoot-mapping-item-inputs-input.players {
+    width:50px; background: url(images/inpoot_icons.png) -155px 0 no-repeat;
+    -moz-background-size: 250px auto !important;
+    background-size:250px auto;
+}
+/*======= MAIN MENU ========*/
+.inpoot-main-wrapper {
+    width: 510px;
+    position:relative;
+    padding-bottom:20px;
+}
+.inpoot-main-option {
+    cursor:pointer;
+    display:inline-block; width:150px; height:200px; 
+    -moz-box-shadow: 0px 3px 3px #444;
+    box-shadow: 0px 3px 3px #444;
+    text-align:center; 
+    position:relative; margin-right:10px; margin-left:10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-bold {font-weight:bold; margin-left:15px;}
+.inpoot-status-bar {
+    opacity:0.45;
+    border-bottom:1px solid #eee;
+    position:absolute; left:10px; top:10px; bottom:10px; 
+    width:15px;
+    background:#aaa;
+    -moz-box-shadow: inset 0 1px 3px #222;
+    -webkit-box-shadow: inset 0 1px 3px #222;
+    box-shadow: inset 0 1px 3px #222;
+}
+.inpoot-status-bar.active, .active .inpoot-status-bar {
+    background:#00FF00;
+}
+.inpoot-main-gamepad-option {
+    width:auto;
+    height:auto;
+    display:block;
+    padding:10px;
+    padding-right:55px;
+    padding-left: 35px; 
+    text-align:left;
+    font-size:18px;
+    color:#444;
+    margin-top:20px;
+    position:relative;
+    overflow:hidden;
+    
+    cursor:pointer;
+    border:1px solid #bbb;
+    border-bottom: 1px solid #888;
+    border-top:1px solid #ddd;
+    position:relative; margin-right:10px; margin-left:10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+    background: -moz-linear-gradient(top,  #eee,  #ccc);
+}
+.inpoot-main-gamepad-option.active {
+    -moz-box-shadow: 0 0 3px #00FF00;
+    -webkit-box-shadow: 0 0 3px #00FF00;
+}
+.inpoot-main-gamepad-option.active:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #ddd);
+}
+.inpoot-gamepad-option-left {display:inline-block; width: 100px;}
+.inpoot-gamepad-option-right {display:inline-block; width: 415px; color:#888; vertical-align:middle;}
+.active .inpoot-gamepad-option-right {color:#444;}
+.inpoot-gamepad-option-subinfo {font-size:12px;}
+.inpoot-main-option:hover {
+    -moz-box-shadow: 0px 2px 2px #444;
+    box-shadow: 0px 2px 2px #444;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#bbb));
+    background: -moz-linear-gradient(top,  #fff,  #bbb);
+}
+.inpoot-main-option:hover .inpoot-main-options-title {
+    bottom:19px;
+}
+.inpoot-main-option:hover .inpoot-main-options-image {
+    top:21px;
+}
+.inpoot-main-options-title {cursor:pointer; position:absolute; left:0; bottom:20px; width:100%; text-transform:uppercase; color:#444; font-size:20px;}
+.inpoot-main-options-image {position:absolute; left:0; top:20px; width:100%;}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    display:inline-block;
+    border-top: 10px solid #888;
+}
+.arrow-down:hover {
+    border-top: 10px solid #444;
+    cursor:pointer;
+}
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    display:inline-block;
+    border-bottom: 20px solid #ccc;
+}
+.arrow-up:hover {
+    border-bottom: 20px solid #999;
+    cursor:pointer;
+}
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    display:inline-block;
+    border-left: 20px solid #ccc;
+}
+.arrow-right:hover {
+    border-left: 20px solid #999;
+    cursor:pointer;
+}
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    display:inline-block;
+    border-right:20px solid #ccc;
+}
+.arrow-left:hover {
+    border-right: 20px solid #999;
+    cursor:pointer;
+}
+
+/* modal (original code here: http://blog.avtex.com/2012/01/26/cross-browser-css-only-modal-box/) */
+body {position:relative;}
+.dumbBoxWrap { /* The div that shows/hides. */
+    position: absolute;
+    top:0px;
+    display:none; /* starts out hidden */
+    width:100%;
+    height:100%;
+    z-index:40001; /* High z-index to ensure it appears above all content */
+}
+.dumbBoxOverlay { /* Shades out background when selector is active */
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:black;  
+    opacity:.5; /* Sets opacity so it's partly transparent */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE transparency */
+    filter:alpha(opacity=50); /* More IE transparency */
+    z-index:40001;
+}
+.vertical-offset { /* Fixed position to provide the vertical offset */
+    position:absolute;
+    top:10%;
+    width:100%;
+    z-index:40002; /* ensures box appears above overlay */
+}
+.dumbBox { /* The actual box, centered in the fixed-position div */
+    font-family : Arial, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    display:none;
+    overflow:hidden;
+    min-height:100px;
+    min-width:200px;
+    height:100px;
+    width:200px;
+    border:8px solid #fff;
+    position:relative;
+    margin:0 auto;
+    background:#fff;
+    padding:20px 20px 0px 20px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -moz-box-shadow: 0px 2px 8px 1px #333; -webkit-box-shadow: 0px 2px 8px 1px #333; box-shadow: 0px 2px 8px 1px #333;
+    transition:all 200ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 200ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 200ms cubic-bezier(0.42,0,0.58,1);
+}
+.dumbBox-content-wrapper {width:2500px; height:2000px; text-align:left;}
+.dumbBox-content {display:inline-block;}
+.dumbBox-buttons {text-align:right; padding-top:10px;}
+.dumbBox-button {margin-left:25px;}
+
+
+/*======== GAME PAD LAYOUT STYLES ========*/
+
+.inpoot-gamepad-calibrate-content {
+    border-radius:10px; -moz-border-radius:10px;
+    position:relative; width:780px; height:300px; margin-left:10px; margin-right:10px;
+    background-image : -webkit-gradient( radial, 28% 50%, 0, 28% 50%, 600, from(rgba(256,256,256,1.0)), to(rgba(220,220,220,1.0)) );
+    background-image : -moz-radial-gradient( 30% 50% 90deg, rgba(256,256,256,1.0) 0%, rgba(230,230,230,1.0) 100% );
+}
+.inpoot-gamepad-calibrate-layout {
+    float:left; width:400px; height:300px; -moz-perspective:600; -webkit-perspective:600; position:relative; -webkit-transform-origin: 50% 50%; -moz-transform-origin: 50% 50%;
+    margin-left:10px;
+}
+.inpoot-gamepad-presskey-bold {font-weight:bold;}
+.inpoot-gamepad-calibrate-gamepad-3d-presskey .inpoot-x-out {
+    position:absolute; right:10px; top:8px;
+    width:25px;
+    height:25px;
+    background: url(images/utility-icons.png) 0 -50px no-repeat;
+    cursor:pointer;
+    opacity:0.4;
+}
+.inpoot-gamepad-calibrate-gamepad-3d-presskey .inpoot-x-out:hover {background: url(images/utility-icons.png) 0 -75px no-repeat; opacity:0.8;}
+.inpoot-help:hover {background: url(images/utility-icons.png) 0 -25px no-repeat; opacity:0.8;}
+.inpoot-gamepad-calibrate-gamepad-3d-presskey {
+    opacity:0.8;
+    display:none;
+    position:absolute;
+    top:20px;
+    left:10px;
+    width:400px;
+    text-align: center;
+    font-size:20px;
+    color:#444;
+    transition:all 200ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 200ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 200ms cubic-bezier(0.42,0,0.58,1);
+    padding-top:9px;
+    padding-bottom:9px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background: -moz-linear-gradient(top,  #fff,  #eee);
+    border:1px solid #eee;
+    border-bottom:1px solid #ddd;
+    border-top:1px solid #fff;
+    -moz-border-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    border-radius:10px;
+}
+.inpoot-gamepad-calibrate-gamepad-3d-presskey.thanks {
+    text-shadow: 0px 0px 3px #00FF00;
+}
+.inpoot-gamepad-calibrate-panel {
+    float:right; width:340px; height:280px;
+}
+.inpoot-gamepad-calibrate-panel-inner {padding:20px; padding-left:0px;}
+.inpoot-gamepad-calibrate-panel-inner-content {
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:#fff; padding:10px; height:200px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+}
+.button-configure {padding:2px 5px; color:#444; cursor:pointer;}
+.button-configure:hover, .button-configure:hover:nth-child(odd) {background:#555; color:#CCC;}
+.button-configure:nth-child(odd) {background:#eee;}
+.inpoot-gamepad-calibrate-gamepad-3d-holder {
+    transition:all 4000ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 4000ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 4000ms cubic-bezier(0.42,0,0.58,1);
+    position:absolute; 
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateX(-27deg) rotateY(20deg) translateX(0px) translateY(115px);
+    -moz-transform-style: preserve-3d;
+    -moz-transform-origin:50% 50%;
+    -moz-transform: rotateX(-27deg) rotateY(20deg) translateX(0px) translateY(115px);
+    width:400px; height:200px;
+    
+}
+.inpoot-gamepad-calibrate-gamepad-3d-holder.turned{
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateX(-27deg) rotateY(-20deg) translateY(115px) translateX(0px);
+    -moz-transform-origin:50% 50%;
+    -moz-transform: rotateX(-27deg) rotateY(-20deg) translateY(115px) translateX(0px);
+}
+
+
+.inpoot-gamepad-calibrate-face {
+    position:absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    opacity:0.90;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+.inpoot-gamepad-calibrate-face.left {width:80px; height:200px; left:0; top:0; 
+    -webkit-transform: rotateY(-90deg) translateX(-80px);
+    -webkit-transform-origin:0% 100%;
+    -moz-transform: rotateY(-90deg) translateX(-80px);
+    -moz-transform-origin:0% 100%;
+}
+.inpoot-gamepad-calibrate-face.right {width:80px; height:200px;
+    -webkit-transform: translateX(400px) rotateY(90deg);
+    -webkit-transform-origin:0% 100%;
+    -moz-transform: translateX(400px) rotateY(90deg);
+    -moz-transform-origin:0% 100%;
+}
+.inpoot-gamepad-calibrate-face.top {width:400px; height:80px; 
+    -webkit-transform: rotateX(90deg) translateY(-80px);
+    -webkit-transform-origin:100% 0%;
+    -moz-transform: rotateX(90deg) translateY(-80px);
+    -moz-transform-origin:100% 0%;
+}
+.inpoot-gamepad-calibrate-face.bottom {width:400px; height:80px; 
+    -webkit-transform-origin:0% 0%;
+    -webkit-transform: translateY(200px) rotateX(-90deg);
+    -moz-transform-origin:0% 0%;
+    -moz-transform: translateY(200px) rotateX(-90deg);
+}
+.inpoot-gamepad-calibrate-face.front {width:400px; height:200px; 
+    
+}
+.inpoot-gamepad-calibrate-face.back {width:400px; height:200px; 
+    -webkit-transform-origin:0% 50%;
+    -webkit-transform: translateX(400px)  rotateY(180deg) translateZ(80px);
+    -moz-transform-origin:0% 50%;
+    -moz-transform: translateX(400px)  rotateY(180deg) translateZ(80px);
+}
+
+/*======== BASE BUTTON STYLING ========*/
+
+.gamepad-button {
+    opacity:0.7;
+    position:absolute;
+    -webkit-transform: translateZ(5px);
+    -moz-transform: translateZ(5px);
+    transition:all 200ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 200ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 200ms cubic-bezier(0.42,0,0.58,1);
+}
+.gamepad-button.axis {opacity:0.4;}
+.gamepad-button.pressed, .gamepad-button.mapping, .gamepad-button.mapped {opacity:1.0;}
+.gamepad-button.axis.pressed, .gamepad-button.axis.mapping, .gamepad-button.axis.mapped {opacity:0.7;}
+
+.gamepad-button.pressed .gamepad-button-inner {
+    transition:all 200ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 200ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 200ms cubic-bezier(0.42,0,0.58,1);
+    -moz-box-shadow: 0px 0px 5px 5px #5555FF;
+    box-shadow: 0px 0px 5px 5px #5555FF;
+    background:#000000 !important;
+    color:#fff !important;
+}
+
+.gamepad-button.mapping .gamepad-button-inner, .gamepad-button.pressed.mapping .gamepad-button-inner {
+    transition:all 200ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 200ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 200ms cubic-bezier(0.42,0,0.58,1);
+    -moz-box-shadow: 0px 0px 5px 5px #FF0000;
+    box-shadow: 0px 0px 5px 5px #FF0000;
+    background:#000000 !important;
+    color:#fff !important;
+}
+
+.gamepad-button.mapped .gamepad-button-inner, .gamepad-button.pressed.mapped .gamepad-button-inner {
+    transition:all 200ms cubic-bezier(0.42,0,0.58,1); -moz-transition:all 200ms cubic-bezier(0.42,0,0.58,1); -webkit-transition:all 200ms cubic-bezier(0.42,0,0.58,1);
+    -moz-box-shadow: 0px 0px 5px 5px #00FF00;
+    box-shadow: 0px 0px 5px 5px #00FF00;
+    background:#000000 !important;
+    color:#fff !important;
+}
+
+.gamepad-button-inner {
+    position:relative;
+    display:inline-block;
+    background:#888;
+    padding-top:3px;
+    width:24px;
+    height:21px;
+    left:-12px;
+    top:-12px;
+    text-align:center;
+    vertical-align:middle;
+    -moz-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+    text-shadow:1px 1px 1px #000;
+}
+
+/*======== SPECIAL BUILT IN STYLES (TRIGGERS, SMALL AND LARGE ROUND, BUMPERS, AXIS)========*/
+
+.gamepad-button.round_small .gamepad-button-inner, .gamepad-button.stick_click .gamepad-button-inner {
+    border-radius:8px; -moz-border-radius:8px;
+    padding-top:0px;
+    width:16px;
+    height:16px;
+    left:-8px;
+    top:-8px;
+}
+.gamepad-button.round .gamepad-button-inner {
+    border-radius:12px; -moz-border-radius:12px;
+    padding-top:5px;
+    font-size:10px;
+    height:19px;
+}
+.gamepad-button.round_large .gamepad-button-inner {
+    border-radius:18px; -moz-border-radius:18px;
+    padding-top:10px;
+    width:36px;
+    height:26px;
+    left:-18px;
+    top:-18px;
+}
+.gamepad-button.trigger {-webkit-transform: translateZ(5px) rotateX(-10deg);}
+.gamepad-button.trigger .gamepad-button-inner {
+    height:30px;
+}
+
+.gamepad-button.bumper .gamepad-button-inner {
+    height:15px;
+    width:60px;
+    left:-30px;
+    padding-bottom:2px;
+}
+.gamepad-button.axis {-webkit-transform: translateZ(15px);}
+
+.gamepad-button.axis.up {-webkit-transform: translateZ(15px) rotateX(15deg) translateY(-15px);}
+.gamepad-button.axis.up .gamepad-button-inner-dec {
+    width: 0;
+    height: 0;
+    left:8px;
+    position:absolute; top:3px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #555; 
+}
+
+.gamepad-button.axis.down {-webkit-transform: translateZ(15px) rotateX(-15deg) translateY(15px);}
+.gamepad-button.axis.down .gamepad-button-inner-dec {
+    width: 0;
+    height: 0;
+    left:8px;
+    position:absolute; bottom:3px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #555; 
+}
+
+.gamepad-button.axis.right {-webkit-transform: translateZ(15px) rotateY(15deg) translateX(15px);}
+.gamepad-button.axis.right .gamepad-button-inner-dec {
+    width: 0;
+    height: 0;
+    top:8px;
+    position:absolute; right:3px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #555; 
+}
+
+.gamepad-button.axis.left {-webkit-transform: translateZ(15px) rotateY(-15deg) translateX(-15px);}
+.gamepad-button.axis.left .gamepad-button-inner-dec {
+    width: 0;
+    height: 0;
+    top:8px;
+    position:absolute; left:3px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #555; 
+}
+
+.gamepad-button.axis .gamepad-button-inner{
+    border-radius:18px; -moz-border-radius:18px;
+    padding-top:10px;
+    width:36px;
+    height:26px;
+    left:-18px;
+    top:-18px;
+    background:#555;
+}
+.gamepad-button.dpadUp .gamepad-button-inner {
+    width: 0;
+    height: 0;
+    left:-10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    background:#ddd;
+}
+.gamepad-button.dpadDown .gamepad-button-inner {
+    width: 0;
+    height: 0;
+    left:-10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    background:#ddd;
+}
+.gamepad-button.dpadLeft .gamepad-button-inner {
+    width: 0;
+    height: 0;
+    left:-5px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+    background:#ddd;
+}
+.gamepad-button.dpadRight .gamepad-button-inner {
+    width: 0;
+    height: 0;
+    left:-5px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+    background:#ddd;
+}
+
+/*======== VENDOR SPECIFIC STYLES ========*/
+
+.gamepad-button.xbox-a .gamepad-button-inner {background:#00AA00; color:#88FF88;}
+.gamepad-button.xbox-b .gamepad-button-inner {background:#FF0000; color:#FF8888;}
+.gamepad-button.xbox-y .gamepad-button-inner {background:#FFAA00; color:#FFDD88;}
+.gamepad-button.xbox-x .gamepad-button-inner {background:#2222FF; color:#8888FF;}
+.gamepad-button.xbox-white .gamepad-button-inner {background:#EEE; color:#ccc;}
+.gamepad-button.xbox-center .gamepad-button-inner {border:3px solid #55FF55; width:30px; height:24px; background:#ccc; color:#fff; padding-top:6px;}
+
+.gamepad-button.ps-trigger {-webkit-transform: translateZ(5px) rotateX(3deg); -moz-transform: translateZ(5px) rotateX(3deg);}
+.gamepad-button.ps-bumper .gamepad-button-inner {height:18px; width:24px; left:-12px; padding-top:2px;}
+.gamepad-button.ps-mid .gamepad-button-inner {color:#fff; background:#444;}
+
+.gamepad-button.ps-x .gamepad-button-inner {color:#624AD8; font-weight:bold; background:#333;}
+.gamepad-button.ps-triangle .gamepad-button-inner {color:#00A876; font-weight:bold; background:#333;}
+.gamepad-button.ps-square .gamepad-button-inner {color:#FF6200; font-weight:bold; background:#333;}
+.gamepad-button.ps-circle .gamepad-button-inner {color:#FF3100; font-weight:bold; background:#333;}
+
