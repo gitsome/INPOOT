@@ -1,6 +1,6 @@
 {
   "name": "INPOOT",
-  "version": "0.9.1 beta",
+  "version": "0.9.1b",
   "description": "Wrap gamepad, keyboard, and mouse inputs for browsers.",
   "homepage": "http://johndavidfive.com/inpoot",
   "repository": {
