@@ -21,7 +21,7 @@ var inpoot = {};
 
     /*======== SOME CROSS BROWSER LOGIC FROM GAMEPAD.JS ========*/
 
-    var contains = function(lookIn, forWhat) { return lookIn.indexOf(forWhat) != -1; };
+    var contains = function(lookIn, forWhat) { return lookIn.indexOf(forWhat) !== -1; };
     var userAgent = navigator.userAgent;
     var isWindows = contains(userAgent, 'Windows NT');
     var isMac = contains(userAgent, 'Macintosh');
@@ -55,6 +55,7 @@ var inpoot = {};
 
                 var isMatch = true;
                 for (var k=0; k < thisMatch.length; k++){
+
                      if (!contains(raw.id, thisMatch[k])) {
                         isMatch = false;
                      }
@@ -157,7 +158,9 @@ var inpoot = {};
 
     //this just returns the raw gamepad objects
     var getRawPads = function () {
-        return navigator.webkitGamepads || navigator.mozGamepads || navigator.gamepads;
+        var gamepadsPoll = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : (navigator.mozGetGamepads ? navigator.mozGetGamepads() : []));
+        window.gyayer = gamepadsPoll;
+        return gamepadsPoll;
     };
 
     //this is used if you want to return an array of active gamepads (somewhat filtered with added attributes)
@@ -167,7 +170,7 @@ var inpoot = {};
 
         var count = 0;
         for (var gpad in tempList) {
-            if(tempList[gpad] !== undefined && gpad != "length" && tempList.hasOwnProperty(gpad)){
+            if(tempList[gpad] && gpad !== "length" && tempList.hasOwnProperty(gpad)){
                 count++;
 
                 //attach some details to the gamepad object
@@ -237,7 +240,7 @@ var inpoot = {};
     };
 
     var getGPadTypeMapping = function (gpadType, inputType, inputIndex) {
-        return gamepadmaps[gpadType].rawToButton[inputType][inputIndex];
+        return gamepadmaps[gpadType] ? gamepadmaps[gpadType].rawToButton[inputType][inputIndex] : false;
     };
 
     var getGamePadText = function (gpadType, buttonType, key) {
@@ -320,7 +323,7 @@ var inpoot = {};
         tickInterval = (tickInterval + 1) % 1000;
 
         //if this flag is set force the tickInterval to 0 so we get new references to player and action mappings
-        if(refreshParamsFlag){
+        if (refreshParamsFlag) {
             tickInterval = 0;
             refreshParamsFlag = false;
         }
@@ -339,17 +342,18 @@ var inpoot = {};
                 //look at all buttons
                 for (var j = 0; j < rawDog.buttons.length; j++) {
                     try {
-                        CI['gamepad'][thisG.gamepadIndex].values[getGPadTypeMapping(rawDog.gpadType, 'buttons', j).bid] = rawDog.buttons[j];
+                        CI['gamepad'][thisG.gamepadIndex].values[getGPadTypeMapping(rawDog.gpadType, 'buttons', j).bid] = rawDog.buttons[j].value;
                     } catch (e) {}
-
                 }
 
                 //look at all axis
                 for (var k = 0; k < rawDog.axes.length; k++) {
-                    var thisGMap = getGPadTypeMapping(rawDog.gpadType, 'axes', j);
+                    var thisGMap = getGPadTypeMapping(rawDog.gpadType, 'axes', k);
+
                     var absValue = Math.abs(rawDog.axes[k]);
                     var threshValue = absValue > threshold ? absValue : 0;
-                    if(thisGMap.subType == 'x'){
+
+                    if(thisGMap.subType === 'x'){
                         if(rawDog.axes[k] <= 0){
                             CI['gamepad'][thisG.gamepadIndex].values[thisGMap.bid + 'left'] = threshValue;
                             CI['gamepad'][thisG.gamepadIndex].values[thisGMap.bid + 'right'] = 0;
@@ -999,8 +1003,6 @@ var inpoot = {};
                 //this function will add an input to the proper space
                 var addInput = function (type, inputInfo, val) {
 
-                    console.log('adding', type, inputInfo, val);
-
                     var thisInputId = actionMap.id;
                     var inputIndex = liveNodeData.mapId;
 
@@ -1015,8 +1017,6 @@ var inpoot = {};
                         subType: inputInfo.subType,
                         direction: inputInfo.direction
                     });
-
-                    console.log('adding:', inputInfo.direction, inputInfo);
 
                     saveActionMap();
                     displayInput(type, inputInfo);
@@ -1039,6 +1039,7 @@ var inpoot = {};
                     for(var gpad in CI['gamepad']) {
                         var thisPad = CI['gamepad'][gpad];
                         if(thisPad.type == gpadType){
+
                             for(var padKey in thisPad.values){
                                 if (thisPad.values[padKey]) {
                                     inputsDown['gamepad'][padKey] = thisPad.values[padKey];
@@ -1051,6 +1052,7 @@ var inpoot = {};
 
                     //check for gamepad inputs that match the current type (we use 0.5 here because xbox triggers default out at 0.5)
                     for(var key in inputsDown['gamepad']){
+
                         if(Math.abs(inputsDown['gamepad'][key]) <= 0.5 && oldInputsDown['gamepad'] && Math.abs(oldInputsDown['gamepad'][key]) > 0.5){
                             addInput('gamepad', getGamePadInputInfo(gpadType, key, oldInputsDown['gamepad'][key]));
                         }
@@ -1617,7 +1619,7 @@ var inpoot = {};
                             for (var j = 0; j < rawDog.buttons.length; j++) {
 
                                 //using 0.5 for threshold. Noticed trigger button on xbox controller when first plugged in reports 0.5 until pressed
-                                if (rawDog.buttons[j] > 0.5 && !buttonPressed) {
+                                if (rawDog.buttons[j].value > 0.5 && !buttonPressed) {
                                     buttonPressed = true;
                                     inpoot.utils.poll.clear('single-button-press');
                                     callBack({
@@ -1630,12 +1632,13 @@ var inpoot = {};
 
                             //look at all axis
                             for (var l = 0; l < rawDog.axes.length; l++) {
+
                                 if (Math.abs(rawDog.axes[l]) > 0.7 && !buttonPressed) {
                                     buttonPressed = true;
                                     inpoot.utils.poll.clear('single-button-press');
                                     callBack({
                                         type: 'axis',
-                                        number: j,
+                                        number: l,
                                         value: rawDog.axes[l]
                                     });
                                 }
@@ -1666,8 +1669,6 @@ var inpoot = {};
 
              var monitor = function() {
                  getButtonPress(function(button){
-
-                    console.log(button);
 
                     $('.pressed').removeClass('pressed');
 
