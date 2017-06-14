@@ -1,3 +1,4 @@
+
 body {margin:0; padding:0;}
 .inpoot-no-select {
     -webkit-touch-callout: none;
@@ -72,7 +73,7 @@ body {margin:0; padding:0;}
 .inpoot-player-options-button.inpoot-gather-add-button.active {
     width: 60px;
     text-align:center; color:#666; font-size:14px;
-    padding-top:9px; padding-bottom:9px;
+    padding-top:8px; padding-bottom:8px;
 }
 .inpoot-player-actionmap:hover, .inpoot-player-options-button:hover {
     -moz-box-shadow: 0 0 3px #00FF00;
@@ -88,7 +89,7 @@ body {margin:0; padding:0;}
 .inpoot-player-title {text-shadow:0px 0px 2px #00ff00;}
 .player-error .inpoot-player-title {text-shadow:0px 0px 2px #ff0000;}
 .inpoot-player-number {vertical-align: top; padding-right:5px; font-size:20px; padding-left:0px; padding-top:6px; display:inline-block;}
-.inpoot-player-actionmap.inpoot-gather-add-button.active {width:220px; height:18px; text-align:center; color:#666; font-size:14px;}
+.inpoot-player-actionmap.inpoot-gather-add-button.active {width:220px; height:21px; text-align:center; color:#666; font-size:14px;}
 .inpoot-player-actionmap-title {float:left; display:inline-block; width: 130px; overflow:hidden; text-align:left;}
 .inpoot-player-input-types {float:right;}
 .inpoot-player-actionmap {overflow:hidden;}
@@ -1102,9 +1103,11 @@ body {position:relative;}
     height:100%;
     z-index:40001; /* High z-index to ensure it appears above all content */
 }
+
 .dumbBoxWrap, .dumbBoxWrap * {
     box-sizing: content-box;
 }
+
 .dumbBoxOverlay { /* Shades out background when selector is active */
     display:none;
     position:fixed;
