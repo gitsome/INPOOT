@@ -1622,6 +1622,9 @@ var inpoot = {};
                                 if (rawDog.buttons[j].value > 0.5 && !buttonPressed) {
                                     buttonPressed = true;
                                     inpoot.utils.poll.clear('single-button-press');
+
+                                    console.log('rawDog.buttons', rawDog.buttons[j]);
+
                                     callBack({
                                         type: 'button',
                                         number: j,
@@ -1636,6 +1639,9 @@ var inpoot = {};
                                 if (Math.abs(rawDog.axes[l]) > 0.7 && !buttonPressed) {
                                     buttonPressed = true;
                                     inpoot.utils.poll.clear('single-button-press');
+
+                                    console.log('rawDog.axes', rawDog.axes[l]);
+
                                     callBack({
                                         type: 'axis',
                                         number: l,
@@ -1679,19 +1685,22 @@ var inpoot = {};
                     }
                     var additionalStyle = " ";
 
-                    if(bMap && bMap.subType){
+                    if(bMap){
 
-                        if (bMap.subType == "y") {
-                            additionalStyle = button.value > 0 ? "down" : "up";
-                        } else if (bMap.subType == "x") {
-                            additionalStyle = button.value > 0 ? "right" : "left";
+                        if (bMap.subType) {
+
+                            if (bMap.subType == "y") {
+                                additionalStyle = button.value > 0 ? "down" : "up";
+                            } else if (bMap.subType == "x") {
+                                additionalStyle = button.value > 0 ? "right" : "left";
+                            }
                         }
-                    }
 
-                    $('.gamepad-button.gamepadclass-' + bMap.bid).addClass('pressed ' + additionalStyle);
-                    inpoot.utils.poll.setTimeout(function(){
-                        $('.gamepad-button.gamepadclass-' + bMap.bid).removeClass('pressed').removeClass(additionalStyle);
-                    }, 350);
+                        $('.gamepad-button.gamepadclass-' + bMap.bid).addClass('pressed ' + additionalStyle);
+                        inpoot.utils.poll.setTimeout(function(){
+                            $('.gamepad-button.gamepadclass-' + bMap.bid).removeClass('pressed').removeClass(additionalStyle);
+                        }, 350);
+                    }
 
                     getNextButton();
                  });
