@@ -289,7 +289,7 @@ var inpoot = {};
     };
 
     //this is the deadzone radius for gamepad axes (sometimes gamepads by default are worn down and axes can get stuck in an "on" position)
-    var threshold = 0.05;
+    var threshold = 0.07;
     inpoot.setThreshold = function (newThreshold) {
         threshold = newThreshold;
     };
