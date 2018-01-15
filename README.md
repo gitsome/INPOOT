@@ -3,9 +3,11 @@ INPOOT
 
 Wrap gamepad, keyboard, and mouse inputs for browsers
 
+See Live Demo : http://johndavidfive.com/sites/gamepres/index.html
+
 This content is released under the MIT License.
 
-Copyright (c) 2012 John David Martin, http://johndavidfive.com/inpoot
+Copyright (c) 2012 John David Martin
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
